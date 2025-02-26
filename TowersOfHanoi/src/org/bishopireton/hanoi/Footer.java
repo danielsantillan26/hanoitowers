@@ -136,7 +136,7 @@ public class Footer extends JPanel {
 	 * creates a JPanel of options including whether the movements should be
 	 * animated and how many disks should make up the tower
 	 * 
-	 * @param focusListener
+	 * @param focusListener The FocusListener to be used
 	 * @return the panel of options 
 	 */
 	private JPanel createOptions(FocusListener focusListener) {

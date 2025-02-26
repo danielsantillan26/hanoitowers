@@ -117,7 +117,7 @@ public class Spindle extends Stack<Disk> {
 	
 	/**
 	 * pushes the appropriate number of disks onto the spindle
-	 * @param numDisks
+	 * @param numDisks	number of disks
 	 */
 	private void createDisks(int numDisks) {
 		if (numDisks == 0) return;

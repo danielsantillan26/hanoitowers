@@ -81,7 +81,9 @@ public class HanoiGraphics extends JPanel {
 	private Hanoi hanoi; 
 
 	/**
-	 * instantiates the GUI for the Towers game 
+	 * instantiates the GUI for the Towers game \
+	 * 
+	 * @param hanoi the Hanoi game object
 	 */
 	public HanoiGraphics(Hanoi hanoi) {
 		this.hanoi = hanoi;
@@ -431,6 +433,9 @@ public class HanoiGraphics extends JPanel {
 	}
 
 	/**
+	 * moves the disk across spindles then calls animateMoveDown
+	 * uses the timer delay ANIMATION_TIME
+	 * 
 	 * @param disk the disk to move 
 	 * @param from the point that it will move from
 	 * @param to the point that it will move to
@@ -469,6 +474,9 @@ public class HanoiGraphics extends JPanel {
 	}
 
 	/**
+	 * moves the disk straight down
+	 * uses the timer delay ANIMATION_TIME
+	 * 
 	 * @param disk the disk to move 
 	 * @param from the point that it will move from
 	 * @param to the point that it will move to

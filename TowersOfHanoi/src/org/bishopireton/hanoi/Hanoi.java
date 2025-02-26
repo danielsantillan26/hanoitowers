@@ -7,10 +7,15 @@ import javax.swing.JButton;
 import javax.swing.SwingWorker;
 
 /**
+ * The Hanoi class is the class that allows the Towers of Hanoi game to run.
+ * 
  * @author Mrs. Kelly
  */
 public class Hanoi {
-
+	
+	/**
+	 * Object for the graphics of the game, used to move disks and lod the game
+	 */
 	private HanoiGraphics hanoiGraphics;
 	/**
 	 * Instantiates the game
@@ -62,7 +67,7 @@ public class Hanoi {
 	 * @param to			the target spindle where all disks should go
 	 * @param spare			the spare spindle
 	 * @param numDisks		the number of disks
-	 * @throws IllegalDiskMoveException 
+	 * @throws IllegalDiskMoveException  ensures no illegal moves are made
 	 */
 	private void hanoi(int from, int to, int spare, int numDisks) throws IllegalDiskMoveException {
 		if (numDisks == 1) {
