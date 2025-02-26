@@ -20,20 +20,22 @@ public class Hanoi {
 		hanoiGraphics = new HanoiGraphics(this);
 	}
 
-
-	// TODO Fill in these java docs
-
+	
 	/**
 	 * creates a swing worker to allow the graphics to display while the  
 	 * hanoi method runs in the background
 	 * 
+	 * @param from			the spindle where all disks are originally at
+	 * @param to			the target spindle where all disks should go
+	 * @param spare			the spare spindle
+	 * @param numDisks		the number of disks
+	 * @param button		the JButton that calls this method
 	 */
 	public void  createSwingWorker(int from, int to, int spare, int numDisks, JButton button) {
 		SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
 
 			@Override
 			protected Void doInBackground() throws Exception {
-				// TODO UPDATE this call to include only the parameters that you need
 				hanoi(from, to, spare, numDisks);
 				return null;
 			}
@@ -48,13 +50,18 @@ public class Hanoi {
 		worker.execute();
 	}
 
-	// TODO Fill in these java docs
+
 
 	/**
 	 * a recursive method that moves a tower of disks to the spare spindle
 	 * then moves the remaining disk to the to spindle, imitating the
-	 * towers of hanoi challenge
+	 * towers of hanoi challenge - uses a base case for an even and odd
+	 * number of disks
 	 *
+	 * @param from			the spindle where all disks are originally at
+	 * @param to			the target spindle where all disks should go
+	 * @param spare			the spare spindle
+	 * @param numDisks		the number of disks
 	 * @throws IllegalDiskMoveException 
 	 */
 	private void hanoi(int from, int to, int spare, int numDisks) throws IllegalDiskMoveException {
